@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration Form</title>
-<style>
-.error {
-  color: red;
-}
-</style>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="error"></div>
 
-<div id="error"></div>
+    <form id="registrationForm">
+      <div>
+        <h1>A Demo HTML Form</h1>
+        <p>This HTML Form includes data validation on its input fields</p>
+      </div>
+      <div class="field">
+        <div class="item">
+          <label for="fname">First name:</label><br />
+          <input type="text" id="firstName" name="firstName" />
+          <span class="error" id="firstNameError"></span>
+        </div>
 
-<form id="registrationForm">
-  <div>
-    <h1>A Demo HTML Form</h1>
-    <p>This HTML Form includes data validation on its input fields</p>
-  </div>
-  <div class="field">
-    <div class="item">
-      <label for="fname">First name:</label><br>
-      <input type="text" id="firstName" name="firstName">
-      <span class="error" id="firstNameError"></span>
-    </div>
+        <div class="item">
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lastName" name="lastName" />
+          <span class="error" id="lastNameError"></span>
+        </div>
 
-    <div class="item">
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lastName" name="lastName">
-      <span class="error" id="lastNameError"></span>
-    </div>
+        <div class="item">
+          <label for="oname">Other names:</label><br />
+          <input type="text" id="otherNames" name="otherNames" />
+          <span class="error" id="otherNamesError"></span>
+        </div>
 
-    <div class="item">
-      <label for="oname">Other names:</label><br>
-      <input type="text" id="otherNames" name="otherNames">
-      <span class="error" id="otherNamesError"></span>
-    </div>
+        <div class="item">
+          <label for="email">Email address:</label><br />
+          <input type="email" id="email" name="email" />
+          <span class="error" id="emailError"></span>
+        </div>
 
-    <div class="item">
-      <label for="email">Email address:</label><br>
-      <input type="email" id="email" name="email">
-      <span class="error" id="emailError"></span>
-    </div>
+        <div class="item">
+          <label for="number">Enter phone number:</label><br />
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            pattern="[0-9]{10,14}"
+          />
+          <span class="error" id="phoneNumberError"></span>
+        </div>
 
-    <div class="item">
-      <label for="number">Enter phone number:</label><br>
-      <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10,14}">
-      <span class="error" id="phoneNumberError"></span>
-    </div>
+        <div class="item">
+          <label for="gender">Gender:</label><br />
+          <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="Others">Others</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+          <span class="error" id="genderError"></span>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
 
-    <div class="item">
-      <label for="gender">Gender:</label><br>
-      <select id="gender" name="gender">
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="Others">Others</option>
-        <option value="Prefer not to say">Prefer not to say</option>
-      </select>
-      <span class="error" id="genderError"></span>
-    </div>
-  </div>
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-</form>
-
-</body>
+    <script src="signup.js"></script>
+  </body>
 </html>
